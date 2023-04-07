@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  mongo:
+    image: mongo:latest
+    restart: always
+    ports:
+      - "27018:27017"
+    volumes:
+      - ./mongo/init-data:/docker-entrypoint-initdb.d
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+
+    command: mongod --auth
+
+  client:
+    build: ./numerical-65-client
+    ports:
+      - "3001:3000"
+    depends_on:
+      - server
+
+  server:
+    build: ./numerical-65-server
+    ports:
+      - "8081:8081"
+    depends_on:
+      - mongo
+
+    links:
+      - mongo

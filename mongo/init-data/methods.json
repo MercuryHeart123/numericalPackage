@@ -1,0 +1,50 @@
+[{
+  "_id": {
+    "$oid": "63942dcd33965db98978adc1"
+  },
+  "methodName": "bisection",
+  "available": true,
+  "processTime": 0
+},{
+  "_id": {
+    "$oid": "63942e1533965db98978adc2"
+  },
+  "methodName": "taylor",
+  "available": true,
+  "processTime": 0
+},{
+  "_id": {
+    "$oid": "63fad7df7077e2197452dcb5"
+  },
+  "methodName": "false-position",
+  "available": true,
+  "processTime": 0
+},{
+  "_id": {
+    "$oid": "63fae3847077e2197452dcb6"
+  },
+  "methodName": "onePoint",
+  "available": true,
+  "processTime": 0
+},{
+  "_id": {
+    "$oid": "6407519f8d3658e66c79a2d1"
+  },
+  "methodName": "newton-raphson",
+  "available": true,
+  "processTime": 0
+},{
+  "_id": {
+    "$oid": "640751c18d3658e66c79a2d3"
+  },
+  "methodName": "secant",
+  "available": true,
+  "processTime": 0
+},{
+  "_id": {
+    "$oid": "641aa93d08f011fe82c15c74"
+  },
+  "methodName": "cramer",
+  "available": true,
+  "processTime": 0
+}]
