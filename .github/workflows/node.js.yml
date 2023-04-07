@@ -30,15 +30,8 @@ jobs:
     - name: Login to DockerHub Registry
       run: echo ${{ secrets.DOCKERHUB_PASSWORD }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
 
-    - name: Build Docker image
+    - name: Build Docker images
       run: docker-compose build
     
-    - name: list image
-      run: docker images
-      
-    - name: Push client to Docker Hub
-      run: docker push mercuryheart123/numerical-65-client:lastest
-      
-    - name: Push server to Docker Hub
-      run: docker push mercuryheart123/numerical-65-server:lastest
-
+    - name: Push Docker images
+      run: docker-compose push
