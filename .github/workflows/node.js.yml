@@ -33,10 +33,10 @@ jobs:
 
     - name: Build Docker image
       run: docker-compose build
-      
-    - name: list docker images
-      run: docker images
 
-    - name: Push to Docker Hub
-      run: docker-compose push mercuryheart123/numericalpackage:lastest
+    - name: Push client to Docker Hub
+      run: docker push mercuryheart123/numerical-65-client:lastest
+      
+    - name: Push server to Docker Hub
+      run: docker push mercuryheart123/numerical-65-server:lastest
 
