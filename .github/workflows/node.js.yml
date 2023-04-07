@@ -32,7 +32,10 @@ jobs:
       run: echo ${{ secrets.DOCKERHUB_PASSWORD }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
 
     - name: Build Docker image
-      run: docker-compose build --tag mercuryheart123/numericalpackage:lastest
+      run: docker-compose build
+      
+    - name: list docker images
+      run: docker images
 
     - name: Push to Docker Hub
       run: docker-compose push mercuryheart123/numericalpackage:lastest
