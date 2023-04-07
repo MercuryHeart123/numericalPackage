@@ -33,12 +33,6 @@ jobs:
     - name: Build Docker image
       run: docker-compose build
     
-    - name: Tag image client
-      run: docker tag mercuryheart123/numerical-65-client mercuryheart123/numerical-65-client:latest
-    
-    - name: Tag image server
-      run: docker tag mercuryheart123/numerical-65-server mercuryheart123/numerical-65-server:latest
-
     - name: Push client to Docker Hub
       run: docker push mercuryheart123/numerical-65-client:lastest
       

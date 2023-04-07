@@ -15,7 +15,7 @@ services:
     command: mongod --auth
 
   client:
-    image: mercuryheart123/numerical-65-client
+    image: mercuryheart123/numerical-65-client:latest
     build: ./numerical-65-client
     ports:
       - "3001:3000"
@@ -23,7 +23,7 @@ services:
       - server
 
   server:
-    image: mercuryheart123/numerical-65-server
+    image: mercuryheart123/numerical-65-server:latest
     build: ./numerical-65-server
     ports:
       - "8081:8081"
